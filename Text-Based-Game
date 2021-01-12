@@ -1,0 +1,286 @@
+###14/12/20
+###PPCasa
+###The Oracle: a text based game
+
+import sys
+import random
+import time
+from time import sleep
+
+print("\nGreetings and welcome to a PPCasa experience!")
+time.sleep(2)
+print("\nThis is PPCasa's first project and I hope you enjoy it...")
+time.sleep(2)
+print("\nBefore we proceed please share two details about yourself: ")
+time.sleep(3)
+
+username = input(" \nWhat is your name? ")
+time.sleep(1)
+print("\nWelcome " + username.title() + "!")
+time.sleep(1)
+companion = input("\nWhat is the name of your closest companion? ")
+time.sleep(1)
+print("\n" + companion.title() + ", ahh, well what a lovely name!")
+time.sleep(2)
+
+def companion_presence():
+    """Comapanion presence understanding"""
+    while True:
+        start = input("\nIs your companion present? ")
+        if start.lower() == "yes":
+            print("\nGreat, let's get started!!!")
+            time.sleep(2)
+            break
+        elif start.lower() == "no":
+            print("\nWell??? Go get them!!!")
+            time.sleep(2)
+            continue
+        else:
+            print("\nWell this game should be played with a partner...")
+            time.sleep(3)
+            print("\n...but it's ok! Alright, alright! Make sure you mention this game!!!")
+            time.sleep(3)
+            break
+
+companion_presence()
+
+print("\nThank you " + username.title() + " for answering those questions.")
+time.sleep(3)
+print("\nThis project is a game called The Oracle. It is a simple text game to test PPCasa's Python abilities.")
+time.sleep(3)
+
+def start_game():
+    """Game starting choice"""
+    while True:
+        start = input("\nWould you like to participate? ")
+        if start.lower() == "yes":
+            print("\nWonderful!")
+            time.sleep(1)
+            break
+        elif start.lower() == "no":
+            print("\nYou suck!")
+            time.sleep(1)
+            quit()
+        else:
+            print("\nSo...")
+            time.sleep(1)
+            print("\nIs it a yes or is it a no?")
+            time.sleep(1)
+            continue
+            
+start_game()
+
+#You are now ready to begin the game.")
+
+pause_dot = "\n.....\n....\n...\n..\n.\n"
+
+for dot in pause_dot:
+        sleep(0.5)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+
+### Quest start
+
+
+print("\nYou walk into the forest and stumble upon an ancient ruin.")
+time.sleep(3)
+print("\nYou approach the entrance and open the door.")
+time.sleep(3)
+print("\nOnce inside, the door slams behind you.")
+time.sleep(3)
+print("\nIt is pitch black, as your eyes adjust you make out a faint light in the distance.")
+time.sleep(3)
+print("\nThe light calls you, you reach closer and closer.")
+sleep(3)
+
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.2)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+print("\nAs you step into the dark chamber, you make out its form.")
+sleep(1)
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.5)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+print("\nA crystal ball.")
+sleep(3)
+print("\nYou feel an urge to touch it, it calls you, it speaks to you in your thoughts. ")
+sleep(3)
+print("\nYou cannot resist.")
+sleep(3)
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.5)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+print("\nYou touch it!")
+sleep(5)
+
+print("\nThe crystal ball changes colour, the light intesifies and becomes vivid.")
+pause_dot = "\n...\n"
+for dot in pause_dot:
+    sleep(.5)
+    sys.stdout.write(dot)
+    sys.stdout.flush()
+
+### Oracle
+print("\nThe ball speaks to you. ")
+sleep(3)
+print("\n'Greetings " + username.title() + ".'")
+sleep(3)
+print("\n'I have been waiting for you.'")
+sleep(3)
+
+print("\nFear shivers down your spine - afterall today you were just meant to just go for a walk with " + companion.title() + ".")
+sleep(3)
+
+print("\nBut for some strange reason " + companion.title() + " insisted you proceed ahead.")
+sleep(3)
+
+print("\n'Have no fear " + username.title() + ", I am here to guide you.'")
+sleep(3)
+
+print("\n'My mission is to save you and " + companion.title() + " from the forces of evil.'")
+sleep(3)
+
+print("\nYou think to yourself, what the hell is going on, only to be interupted by the Oracle.")
+sleep(3)
+
+print("\n'Listen to me " + username.title() + ", we have no time to spare!'")
+sleep(3)
+
+print("\n'You must face the Darkness alone - only you can prevail.'")
+sleep(3)
+
+### Demon eyes
+
+pause_dot = "\n....\n"
+for dot in pause_dot:
+        sleep(.5)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+print("\nEverything goes pitch black.")
+sleep(3)
+print("\nThe Oracle dissappears.")
+
+pause_dot = "\n....\n"
+for dot in pause_dot:
+        sleep(.5)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+
+print("\nYou hear a devilish voice.")
+sleep(3)
+print("\n'It is too late " + username.title() + ".'")
+sleep(3)
+print("\n'I have taken " + companion.title() + " and now I will take you too!'")
+sleep(3)
+
+print("\nThe Demon's fiery eyes illuminate the chamber.")
+sleep(3)
+print("\nYou look around to see what you can do.")
+sleep(3)
+print("\nIn these situations, you can either fight or run.")
+sleep(3)
+
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.2)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+def fight():
+    """Player fights"""
+    print("\nYou run towards the monster, fighting with all your strength.")
+    sleep(3)
+    print("\nBut you can't move.")
+    sleep(3)
+    print("\n'You fool! " + username.title() + ".'")
+    sleep(3)
+    print("\n'Did you think you could stop me?'")
+    sleep(3)
+    print("\n'Not even " + companion.title() +" could make it.'")
+    sleep(3)
+    print("\nThe incadenscent eyes grow closer to you.")
+    sleep(3)
+    print("\nYou struggle to move.")
+    sleep(3)
+    print("\nThe eyes grow closer.")
+    sleep(3)
+    print("\nA hand touches you.")
+    sleep(3)
+    print("\nEverything goes black.")
+    sleep(3)
+    morning()
+
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.2)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+def run():
+    """Player runs"""
+    print("\nYou head towards the entrance")
+    sleep(3)
+    print("\nYou can see a faint light from the main door")
+    sleep(3)
+    print("\nYou run towards the exit, but as you get closer, the light gets further away.")
+    sleep(3)
+    print("\nYour legs feel heavy until you can no longer move.")
+    sleep(3)
+    print("\nYou feel a burning sensation on your neck.")
+    sleep(3)
+    print("\n'You are fool just like " + companion.title() + ".'")
+    sleep(3)
+    print("\nYou feel a hand touching your shoulder.")
+    sleep(3)
+    print("\nEverything goes black.")
+    sleep(3)
+    morning()
+
+pause_dot = "\n...\n"
+for dot in pause_dot:
+        sleep(.2)
+        sys.stdout.write(dot)
+        sys.stdout.flush()
+
+def morning():
+    """morning end"""
+    print("\nYou open your eyes, the morning light shines through the window.")
+    sleep(3)
+    print("\nYou are safely in your bed.")
+    sleep(3)
+    print("\nYou turn your head around and " + companion.title() + " is right next to you.")
+    sleep(3)
+    print("\nWas it all a dream??")
+    sleep(3)
+    print("\nWhat a weird dream, I should go easy on the cheese.")
+    sleep(3)
+
+
+def monster():
+  """player faces monster"""
+  while True:
+    start = input("\nYou must choose: 1) Fight, 2) Run :")
+    print("\n")
+    if start == "1":
+        fight()
+        return
+    elif start == "2":
+        run()
+        return
+
+
+monster()
+
+exit
