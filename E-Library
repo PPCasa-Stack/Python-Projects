@@ -1,0 +1,859 @@
+###22/12/20
+###PPCASA
+###E-Library
+
+
+#ask for user sign up
+
+print("\nWelcome to PPCasa's Book Emporium")
+print("\nThis is project is meant to test PPCasa's skills in emulating an online bookstore")
+print("\nTo use our service, please create your account: ")
+username = input("\nPlease choose a username? - ")
+password = input("\nPlease choose a password? - ")
+print("\nWelcome " + username.title() + ".")
+print("\nBefore accessing your account, we need you to log back in again.")
+
+#log-in procedure
+
+def useraccess():
+    """passing user test"""
+    while True:
+        start = input("\nPlease insert your username: -  ")
+        if start.lower() != username:
+            print("\nYour username could not be verified, try again")
+            continue
+    
+        else:
+            print("\nThank you")
+            break
+useraccess ()
+
+def useraccess_1():
+    """ passing password test"""
+    while True:
+        start = input ("\nTo proceed please insert your password: ")
+        if start.lower() == password:
+            print("\nThank you, we are validating...")
+            print("\nYou have passed our two factor system.")
+            print("\nYou will be redirected to our book list.")
+            print("\nPlease wait...")
+            return
+    
+        else:
+            print("\nYour password could not be verified, please try again")
+            continue
+useraccess_1()
+
+#book list
+book_1 = {'name' : 'The Da Vinci Code', 
+    'author' : 'dan brown', 
+    'publisher' : 'transworld Grp', 
+    'genre' : 'Thriller', 
+    'price' : 11
+    }
+book_2 = {'name' : 'Harry Potter and the Deathly Hallows', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ',  
+    'price' : 12 
+    }
+book_3 = {'name' : 'Harry Potter and the Philosopher\'s Stone', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ',  
+    'price' : 12 
+    }
+book_4 = {'name' : 'Harry Potter and the Order of the Phoenix', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    } 
+book_5 = {'name' : 'Fifty Shades of Grey', 
+    'author' : 'E. L. James ', 
+    'publisher' : 'Random House Grp',
+    'genre' : 'adult fiction ' , 
+    'price' : 12
+    }
+book_6 = {'name' : 'Harry Potter and the Goblet of Fire', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    }
+book_7 = {'name' : 'Harry Potter and the Chamber of Secrets', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    }
+book_8 = {'name' : 'Harry Potter and the Prisoner of Azkaban', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    }
+book_9 = {'name' : 'Angels and Demons', 
+    'author' : 'Dan Brown', 
+    'publisher' : 'Transworld Grp',  
+    'genre' : 'Thriller', 
+    'price' : 11 
+    }
+book_10 = {'name' : 'Harry Potter and the Half-blood Prince', 
+    'author' : 'J.k. Rowling', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    }
+book_11 = {'name' : 'Fifty Shades Darker', 
+    'author' : 'James, E. L.', 
+    'publisher' : 'Random House Grp',
+    'genre' : 'adult fiction ' , 
+    'price' : 12
+    }
+book_12 = {'name' : 'Twilight', 
+    'author' : 'Stephanie Meyer', 
+    'publisher' : 'Little, Brown Book Grp', 
+    'genre' : 'fiction', 
+    'price' : 13
+    }
+book_13 = {'name' : 'Girl with the Dragon Tattoo', 
+    'author' : 'Stieg Larsson', 
+    'publisher' : 'Quercus Grp', 
+    'genre' : 'Thriller', 
+    'price' : 14 
+    }
+book_14 = {'name' : 'Fifty Shades Freed', 
+    'author' : 'James, E. L.', 
+    'publisher' : 'Random House Grp',
+    'genre' : 'adult fiction ' , 
+    'price' : 12 
+    }
+book_15 = {'name' : 'Lost Symbol', 
+    'author' : 'Dan Brown', 
+    'publisher' : 'Transworld Grp', 
+    'genre' : 'Thriller', 
+    'price' : 11 
+    }
+book_16 = {'name' : 'New Moon', 
+    'author' : 'Stephanie Meyer', 
+    'publisher' : 'Little, Brown Book Grp', 
+    'genre' : 'fiction', 
+    'price' : 13
+    }
+book_17 = {'name' : 'Deception Point', 
+    'author' : 'Dan Brown', 
+    'publisher' : 'Transworld Grp', 
+    'genre' : 'Thriller', 
+    'price' : 11
+    }
+book_18 = {'name' : 'Eclipse', 
+    'author' : 'Stephanie Meyer', 
+    'publisher' : 'Little, Brown Book Grp', 
+    'genre' : 'fiction', 
+    'price' : 13 
+    }
+book_19 = {'name' : 'The Lovely Bones', 
+    'author' : 'Alice Sebold', 
+    'publisher' : 'Pan Macmillan Grp',  
+    'genre' : 'fiction',
+    'price' : 14
+    }
+book_20 = {'name' : 'The Curious Incident of the Dog in the Night-time', 
+    'author' : 'Mark Haddon', 
+    'publisher' : 'Random House Grp',  
+    'genre' : 'Fiction', 
+    'price' : 14 
+    }
+book_21 = {'name' : 'Digital Fortress', 
+    'author' : 'Dan Brown', 
+    'publisher' : 'Transworld Grp', 
+    'genre' : 'Thriller', 
+    'price' : 11 
+    }
+book_22 = {'name' : 'A Short History of Nearly Everything', 
+    'author' : 'Bill Bryson', 
+    'publisher' : 'Transworld',
+    'genre' : 'popular science ',  
+    'price' : 12 
+    }
+book_23 = {'name' : 'The Girl Who Played with Fire', 
+    'author' : 'Stieg Larsson', 
+    'publisher' : 'Quercus Grp', 
+    'genre' : 'Thriller', 
+    'price' : 14 
+    }
+book_24 = {'name' : 'Breaking Dawn', 
+    'author' : 'Stephanie Meyer', 
+    'publisher' : 'Little, Brown Book Grp',
+    'genre' : 'fiction', 
+    'price' : 13 
+    }
+book_25 = {'name' : 'The:The Very Hungry Caterpillar', 
+    'author' : 'Eric Carle', 
+    'publisher' : 'Penguin Grp', 
+    'genre' : 'Children\'s fiction ', 
+    'price' : 12
+    }
+book_26 = {'name' : 'The Gruffalo', 
+    'author' : 'Julia Donaldson', 
+    'publisher' : 'Pan Macmillan Grp',  
+    'genre' : 'Children\'s fiction ', 
+    'price' : 14 
+    }
+book_27 = {'name' : 'The Kite Runner', 
+    'author' : 'Khaled Hosseini', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'fiction', 
+    'price' : 13
+    }
+book_28 = {'name' : 'One Day', 
+    'author' : 'David Nichols', 
+    'publisher' : 'Hodder & Stoughton Grp', 
+    'genre' : 'fiction', 
+    'price' : 11 
+    }
+book_29 = {'name' : 'A Thousand Splendid Suns', 
+    'author' : 'Khaled Hosseini', 
+    'publisher' : 'Bloomsbury Grp', 
+    'genre' : 'fiction', 
+    'price' : 13 
+    }
+book_30 = {'name' : 'The Girl Who Kicked the Hornet\'s Nest', 
+    'author' : 'Stieg Larsson', 
+    'publisher' : 'Quercus Grp', 
+    'genre' : 'Thriller', 
+    'price' : 14
+    }
+book_31 = {}
+book_32 = {}
+book_33 = {}
+book_34 = {}
+book_35 = {}
+
+available_books = [book_1, book_2, book_3, book_4, book_5, book_6, book_7, book_8, book_9, book_10, book_11, book_12, book_13, book_14, book_15,
+    book_16, book_17, book_18, book_19, book_20, book_21, book_22, book_23, book_24, book_25, book_26, book_27, book_28, book_29, book_30]
+
+suggested_books = [book_31, book_32, book_33, book_34, book_35]
+
+def suggestion():
+    """suggestion module 1"""
+    while True:
+        start = input ("\nWould you like to suggest a book? (type 'h' for help) "  ) 
+        print("\nType 'yes' or 'no' \nYou may suggest up to 5 books. \nIf this your second (or above) suggestion, type 'more'  ")
+        if start.lower() == 'yes':
+            book_31 = {}
+            book_31_name = input ("\nPlease enter the name of the book: ")
+            book_31_author = input ("\nPlease enter the author of the book: ")
+            book_31_publisher = input ("\nPlease enter the publisher of the book: ")
+            book_31_genre = input ("\nPlease enter the genre of the book: ")
+            book_31_price = input ("\nPlease enter the price of the book: ")
+            book_31 = {'name' : book_31_name, 
+            'author' : book_31_author,
+            'publisher' : book_31_publisher,
+            'genre' : book_31_genre,
+            'price' : book_31_price
+            }
+            print("\nThank you, we have added your suggestion: ")
+            print(book_31)
+            return suggestion_2
+        elif start.lower() == 'no':
+            print("\nYou are being redirected to the shopping platform. ")
+            bookinterest()
+        elif start.lower() == 'more':
+            suggestion_2
+        else:
+            pass
+     
+ 
+def suggestion_2():
+    """suggestion module 2"""
+    while True:
+        start = input("\nWould you like to suggest a second book? (type 'h' for help) " )
+        print("\nType 'yes' or 'no' \nYou may suggest up to 5 books. \nIf this your second (or above) suggestion, type 'more'  ")
+        if start.lower() == 'yes':
+            book_32 = {}
+            book_32_name = input ("\nPlease enter the name of the book: ")
+            book_32_author = input ("\nPlease enter the author of the book: ")
+            book_32_publisher = input ("\nPlease enter the publisher of the book: ")
+            book_32_genre = input ("\nPlease enter the genre of the book: ")
+            book_32_price = input ("\nPlease enter the price of the book: ")
+            book_32 = {'name' : book_31_name, 
+            'author' : book_32_author,
+            'publisher' : book_32_publisher,
+            'genre' : book_32_genre,
+            'price' : book_32_price
+            }
+            print("\nThank you, we have added your suggestion: ")
+            print(book_31 + book_32)
+            suggestion_3
+        elif start.lower() == 'no':
+            print("\nYou are being redirected to the shopping platform. ")
+            bookinterest()
+        elif start.lower() == 'more':
+            suggestion_3
+        else:
+            pass
+
+def suggestion_3():
+    """suggestion module 3"""
+    while True:
+        start = input("\nWould you like to suggest a third book? (type 'h' for help) " )
+        print("\nType 'yes' or 'no' \nYou may suggest up to 5 books. \nIf this your second (or above) suggestion, type 'more' ")
+        if start.lower() == 'yes':
+            book_33 = {}
+            book_33_name = input ("\nPlease enter the name of the book: ")
+            book_33_author = input ("\nPlease enter the author of the book: ")
+            book_33_publisher = input ("\nPlease enter the publisher of the book: ")
+            book_33_genre = input ("\nPlease enter the genre of the book: ")
+            book_33_price = input ("\nPlease enter the price of the book: ")
+            book_33 = {'name' : book_33_name, 
+            'author' : book_33_author,
+            'publisher' : book_33_publisher,
+            'genre' : book_33_genre,
+            'price' : book_33_price
+            }
+            print("\nThank you, we have added your suggestion: ")
+            print(book_31, book_32, book_33)
+            suggestion_4
+        elif start.lower() == 'no':
+            print("\nYou are being redirected to the shopping platform. ")
+            bookinterest()
+        elif start.lower() == 'more':
+            suggestion_4
+        else:
+            pass
+
+
+def suggestion_4():
+    """suggestion module 4"""
+    while True:
+        start = input("\nWould you like to suggest a fourth book? (type 'h' for help) " )
+        print("\nType 'yes' or 'no' \nYou may suggest up to 5 books. \nIf this your second (or above) suggestion, type 'more' ")
+        if start.lower() == 'yes':
+            book_34 = {}
+            book_34_name = input ("\nPlease enter the name of the book: ")
+            book_34_author = input ("\nPlease enter the author of the book: ")
+            book_34_publisher = input ("\nPlease enter the publisher of the book: ")
+            book_34_genre = input ("\nPlease enter the genre of the book: ")
+            book_34_price = input ("\nPlease enter the price of the book: ")
+            book_34 = {'name' : book_34_name, 
+            'author' : book_34_author,
+            'publisher' : book_34_publisher,
+            'genre' : book_34_genre,
+            'price' : book_34_price
+            }
+            print("\nThank you, we have added your suggestion: ")
+            print(book_31, book_32, book_33, book_34)
+            suggestion_5
+        elif start.lower() == 'no':
+            print("\nYou are being redirected to the shopping platform. ")
+            bookinterest()
+        elif start.lower() == 'more':
+            suggestion_5
+        else:
+            pass
+
+def suggestion_5():
+    """suggestion module 5"""
+    while True:
+        start = input("\nWould you like to suggest a fifth book? (type 'h' for help) " )
+        print("\nType 'yes' or 'no'")
+        if start.lower() == 'yes':
+            book_35 = {}
+            book_35_name = input ("\nPlease enter the name of the book: ")
+            book_35_author = input ("\nPlease enter the author of the book: ")
+            book_35_publisher = input ("\nPlease enter the publisher of the book: ")
+            book_35_genre = input ("\nPlease enter the genre of the book: ")
+            book_35_price = input ("\nPlease enter the price of the book: ")
+            book_35 = {'name' : book_35_name, 
+            'author' : book_35_author,
+            'publisher' : book_35_publisher,
+            'genre' : book_35_genre,
+            'price' : book_35_price
+            }
+            print("\nThank you, we have added your suggestion: ")
+            print(book_31, book_32, book_33, book_34, book_35)
+            accesstitle()
+        elif start.lower() == 'no':
+            print("\nYou are being redirected to the shopping platform. ")
+            bookinterest()
+        else:
+            pass
+
+
+
+cart = []
+
+#access booklist
+def accesstitle():
+    """passing access test"""
+    print("\nDear " + username.title() + ".")
+    while True:
+        start = input("\nWould you like to view today's available titles? (yes or no) " )
+        if start.lower() == "yes":
+            print("\nPlease wait as I fetch the list of available titles. ")
+            booktitles()
+            return
+            
+        elif start.lower() == "no":
+            start = input("\nWould you like to log out? ")
+            if start.lower()== "yes":
+                print("\nThank you for using our service ")
+                quit()
+
+            else:
+                continue
+        else:
+            print("\nPlease type yes or no. ")
+            break
+
+def booktitles():
+    """fetching library list"""
+    print("\nThe number of available book is:", len(available_books))
+    print("\nThe titles are: ")
+    for books in available_books:
+        print("\n" + books["name"] + " - ")
+        print("Price: €" , books['price'])
+        
+
+
+
+
+def bookinterest ():
+    """gauging user interest in books""" 
+    while True:
+        start = input("\nAre you interested in any of the books? ")
+        if start.lower() == "yes":
+            print("\nPlease wait as we redirect you to our shopping platform. ")
+            shopping_platform()
+            return
+        elif start.lower() == "no":
+            start = input("\nWould you like to place a suggestion for an out-of-stock book? ")
+            if start.lower() == "yes":
+                print("\nPlease wait as we redirect you to our suggestion platform. ")
+                suggestion()
+            elif start.lower() == "no":
+                start = input("\nWould you like to log out?. ")
+                if start.lower() == "yes":
+                    print("\nThank you for using our service. ")
+                    quit()
+                elif start.lower() == "no":
+                    return
+                else:
+                    print("\nPlease type yes or no. ")
+                    break
+            else:
+                print("\nPlease type yes or no. ")
+                break
+        else:
+            print("\nPlease type yes or no. ")
+            break
+accesstitle()
+
+
+
+def shopping_platform():
+    """user preselection list"""
+    print("\nThe titles are: ")
+    for books in available_books:
+        print(books)
+        shopping_cart()
+cart = []
+
+def shopping_cart():
+    """user shoppinglist"""
+    while True:
+        start = input("\nWhich book(s) are you interested in? (press 'h' for more information): ")
+        print("\nIf you no longer desire books press 'q' ")
+        print("\nIf you would like to make a suggestion press 's' ")
+        if start.lower() == "the da vinci code":
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_1)
+                print("\nThe book has been added. ")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_1)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-' ")
+                continue
+        elif start.lower() == 'harry potter and the deathly hallows':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_2)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_2)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the philosopher\'s stone':
+            start = input("\nWould you like to add (+) or remove (-) book?")
+            if start.lower() == "+":
+                cart.append(book_3)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_3)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the order of the phoenix' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_4)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_4)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'fifty shades of grey' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_5)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_5)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the goblet of fire':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_6)
+                print("\nThe book has been added. ")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_6)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the chamber of secrets' :
+            start = input("\nWould you like to add (+) or remove (-) book?")
+            if start.lower() == "+":
+                cart.append(book_7)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_7)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the prisoner of azkaban':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_8)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_8)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'angels and demons':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_9)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_9)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'harry potter and the half-blood prince':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_10)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_10)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'fifty shades darker':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_11)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_11)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'twilight':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_12)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_12)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-' ")
+                continue
+        elif start.lower() == 'girl with the dragon tattoo':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_13)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_13)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'fifty shades freed':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_14)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_14)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'lost symbol' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_15)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_15)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() ==  'new moon':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_16)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_16)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'deception point' :
+            cstart = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_17)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_17)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'eclipse':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_18)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_18)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the lovely bones':
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_19)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_19)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the curious incident of the dog in the night-time' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_20)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_20)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'digital fortress' : 
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_21)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_21)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'a short history of nearly everything' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_22)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_22)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the girl who played with fire' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_23)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_23)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'breaking dawn' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_24)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_24)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the very hungry caterpillar' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_25)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_25)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the gruffalo' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_26)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_26)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'the kite runner' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_27)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_27)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'one day' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_28)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_28)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() ==  'a thousand splendid suns' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_29)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_29)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'The girl who kicked the hornets nest' :
+            start = input("\nWould you like to add (+) or remove (-) book? ")
+            if start.lower() == "+":
+                cart.append(book_30)
+                print("\nThe book has been added.")
+                continue
+            elif start.lower() == "-":
+                cart.remove(book_30)
+                continue
+            else:
+                print("To Add type: '+'\nTo Remove type: '-'")
+                continue
+        elif start.lower() == 'q':
+            print("leaving list")
+            exitcart()
+        elif start.lower() == 's':
+            print("\nRedirecting to suggestion cart. ")
+            # to make up to 5 suggestions
+            suggestion()
+        else:
+            pass
+
+
+def exitcart():
+    """exit procedure"""
+    print("this is your shopping cart: ")
+    print(cart)
+    print("The total amount due is: ")
+    carttotal = sum(item['price'] for item in cart)
+    print(carttotal)
+    while True:
+        start = input("\nWould you like to check out? ")
+        if start.lower() == "yes":
+            print("\nThank you for you using PPCasa's Book Emporium. ")
+            quit()
+        elif start.lower() == "no":
+            print("\nPlease wait as you are redirected to the shopping platform. ")
+            shopping_cart()
+        else:
+            print ("\nPlease type in: 'yes' or 'no'. ")
+            continue
+shopping_cart()
